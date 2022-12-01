@@ -6,7 +6,7 @@ use Staditek\App\config\Database;
 class dataMemberTrx extends Database
 {
   public function membertrx(){
-    $statement = self::$conn->prepare("select member.name, member.phone, member.address, subscription.title, subscription.month, subscription.price, subscription.status, member_trx.date_trx, member_trx.total_order from member inner join subscription on member.id_member = subscription.id_subscription inner join member_trx on subscription.id_subscription = member_trx.id_member_trx");
+    $statement = self::$conn->prepare("select member.name, member.phone, member.address, subscription.title, subscription.month, subscription.price, subscription.status, member_trx.date_trx, member_trx.total_order, member_trx.created_at, member_trx.updated_at from member inner join subscription on member.id_member = subscription.id_subscription inner join member_trx on subscription.id_subscription = member_trx.id_member_trx");
     $statement->execute();
     return $statement->fetchAll(\PDO::FETCH_OBJ);
   }

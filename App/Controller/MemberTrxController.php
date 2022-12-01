@@ -15,16 +15,16 @@ class MemberTrxController
   }
   public function membertrx(){
     $tampilDataMemberTrx = self::$model->membertrx();
-    View::renderMemberTrx ('MemberTrx ', $tampilDataMemberTrx );
+    View::renderMemberTrx ('MemberTrx', $tampilDataMemberTrx );
   }
 
   public function viewOneMemberTrx($id_MemberTrx){
     $OneMemberTrx = self::$model->findMemberTrx ($id_MemberTrx);
-    View::renderOneMemberTrxDisplay('editMemberTrx ', $OneMemberTrx );
+    View::renderOneMemberTrxDisplay('editMemberTrx', $OneMemberTrx );
   }
 
   public function addMemberTrxDisplay(){
-    View::renderAddMemberTrxDisplay('addMemberTrx ');
+    View::renderAddMemberTrxDisplay('addMemberTrx');
   }
 
 
@@ -43,7 +43,7 @@ class MemberTrxController
     ];
     var_dump($saveMemberTrx );
     self::$model->saveMemberTrx ($saveMemberTrx );
-    Router::redirect('GITHUB/LIBRARY-FRAMEWORK2/Public/MemberTrx ');
+    Router::redirect('GITHUB/LIBRARY-FRAMEWORK2/Public/MemberTrx');
   }
 
   public function updateAddMemberTrx($id_MemberTrx){
@@ -59,13 +59,13 @@ class MemberTrxController
       'updated_at'=> $_POST['updated_at']
     ];
     self::$model->updateMemberTrx ($updateMemberTrx ,$id_MemberTrx);
-    Router::redirect('GITHUB/LIBRARY-FRAMEWORK2/Public/MemberTrx ');
+    Router::redirect('GITHUB/LIBRARY-FRAMEWORK2/Public/MemberTrx');
 
   }
 
   public function deleteMemberTrx($id_user){
     self::$model->deleteMemberTrx($id_user);
-    Router::redirect('GITHUB/LIBRARY-FRAMEWORK2/Public/MemberTrx ');
+    Router::redirect('GITHUB/LIBRARY-FRAMEWORK2/Public/MemberTrx');
 
   }
 

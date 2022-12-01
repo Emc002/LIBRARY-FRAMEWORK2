@@ -56,11 +56,8 @@ class View{
   // MEMBER TRX
   public static function renderMemberTrx(string $view, $data)
   {
-   
     require_once __DIR__. '/../View/template/header.php';
-
     require_once __DIR__. '/../View/template/sidebarleft.php';
-   
     require_once __DIR__. '/../View/membertrx/'.$view.'.php';
     require_once __DIR__. '/../View/template/footer.php';
   }
