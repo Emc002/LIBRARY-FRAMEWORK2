@@ -1,0 +1,16 @@
+{
+  "name": "staditek/librarian-framework2",
+  "description": "PHP",
+  "type": "project",
+  "authors": [
+   {
+      "name": "ALIF NAFISA ALGHANY",
+      "email": "alifnafislaghany@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Staditek\\App\\" : "App"
+    }
+  }
+}
