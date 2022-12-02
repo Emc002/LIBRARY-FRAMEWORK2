@@ -15,16 +15,16 @@ class LibrarianController
   }
   public function librarian(){
     $tampilDataLibrarian = self::$model->librarian();
-    View::renderLibrarian('Librarian', $tampilDataLibrarian);
+    View::render('librarian/Librarian', $tampilDataLibrarian);
   }
 
   public function viewOneLibrarian($id_librarians){
     $OneLibrarian = self::$model->findLibrarian($id_librarians);
-    View::renderOneLibrarianDisplay('editLibrarian', $OneLibrarian);
+    View::render('librarian/editLibrarian', $OneLibrarian);
   }
 
   public function addLibrarianDisplay(){
-    View::renderAddLibrarianDisplay('addLibrarian');
+    View::render('librarian/addLibrarian');
   }
 
 

@@ -4,27 +4,40 @@ namespace Staditek\App\Controller;
 use Staditek\App\Core\Router;
 use Staditek\App\Core\View;
 use Staditek\App\Model\membertrx\dataMemberTrx;
+use Staditek\App\Model\member\dataMember;
+use Staditek\App\Model\subscription\dataSubscription;
+
 
 class MemberTrxController
 {
 
   private static $model;
+  private static $modelMember;
+  private static $modelSubscription;
+
+
   public function __construct()
   {
     self::$model= new dataMemberTrx();
+    self::$modelMember= new dataMember();
+    self::$modelSubscription= new dataSubscription();
+
+
   }
   public function membertrx(){
     $tampilDataMemberTrx = self::$model->membertrx();
-    View::renderMemberTrx ('MemberTrx', $tampilDataMemberTrx );
+    View::render('membertrx/MemberTrx', $tampilDataMemberTrx );
   }
 
   public function viewOneMemberTrx($id_MemberTrx){
     $OneMemberTrx = self::$model->findMemberTrx ($id_MemberTrx);
-    View::renderOneMemberTrxDisplay('editMemberTrx', $OneMemberTrx );
+    View::render('membertrx/editMemberTrx', $OneMemberTrx );
   }
 
   public function addMemberTrxDisplay(){
-    View::renderAddMemberTrxDisplay('addMemberTrx');
+    $tampilDataMember = self::$modelMember->member();
+    $tampilDataSubscription = self::$modelSubscription->subscription();
+    View::render('membertrx/addMemberTrx',  $tampilDataMember, $tampilDataSubscription  );
   }
 
 

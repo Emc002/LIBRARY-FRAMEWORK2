@@ -15,16 +15,16 @@ class SubscriptionController
   }
   public function subscription(){
     $tampilDataSubscription = self::$model->subscription();
-    View::renderSubscription('Subscription', $tampilDataSubscription);
+    View::render('subscription/Subscription', $tampilDataSubscription);
   }
 
   public function viewOneSubscription($id_subscription){
     $OneSubscription = self::$model->findSubscription($id_subscription);
-    View::renderOneSubscriptionDisplay('editSubscription', $OneSubscription);
+    View::render('subscription/editSubscription', $OneSubscription);
   }
 
   public function addSubscriptionDisplay(){
-    View::renderAddSubscriptionDisplay('addSubscription');
+    View::render('subscription/addSubscription');
   }
 
 

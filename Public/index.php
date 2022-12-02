@@ -44,14 +44,14 @@ Router::addRoute('GET', '/deleteMemberTrx/:id', MemberTrxController::class,'dele
 Router::addRoute('GET', '/book', BookController::class,'book',[Auth::class]);
 Router::addRoute('GET', '/addBookDisplay', BookController::class,'addBookDisplay',[Auth::class]);
 Router::addRoute('POST', '/saveAddBook', BookController::class,'saveAddBook',[Auth::class]);
-Router::addRoute('GET', '/viewOneBookX/:id', BookController::class,'viewOneBook',[Auth::class]);
+Router::addRoute('GET', '/viewOneBook/:id', BookController::class,'viewOneBook',[Auth::class]);
 Router::addRoute('POST', '/updateBook/:id', BookController::class,'updateAddBook',[Auth::class]);
 Router::addRoute('GET', '/deleteBook/:id', BookController::class,'deleteBook',[Auth::class]);
 
 // SUBSCRIPTION
 Router::addRoute('GET', '/subscription', SubscriptionController::class,'subscription',[Auth::class]);
 Router::addRoute('GET', '/addSubscriptionDisplay', SubscriptionController::class,'addSubscriptionDisplay',[Auth::class]);
-Router::addRoute('GET', '/saveAddSubscription', SubscriptionController::class,'saveAddSubscription',[Auth::class]);
+Router::addRoute('POST', '/saveAddSubscription', SubscriptionController::class,'saveAddSubscription',[Auth::class]);
 Router::addRoute('GET', '/viewOneSubscription/:id', SubscriptionController::class,'viewOneSubscription',[Auth::class]);
 Router::addRoute('POST', '/updateSubscription/:id', SubscriptionController::class,'updateAddSubscription',[Auth::class]);
 Router::addRoute('GET', '/deleteSubscription/:id', SubscriptionController::class,'deleteSubscription',[Auth::class]);

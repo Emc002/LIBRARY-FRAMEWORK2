@@ -15,16 +15,16 @@ class MemberController
   }
   public function member(){
     $tampilDataMember = self::$model->member();
-    View::renderMember('Member', $tampilDataMember);
+    View::render('member/Member', $tampilDataMember);
   }
 
   public function viewOneMember($id_member){
     $OneMember = self::$model->findMember($id_member);
-    View::renderOneMemberDisplay('editMember', $OneMember);
+    View::render('member/editMember', $OneMember);
   }
 
   public function addMemberDisplay(){
-    View::renderAddMemberDisplay('addMember');
+    View::render('member/addMember');
   }
 
 

@@ -10,11 +10,25 @@ $arrivalString = $arrival->format("Y-m-d H:i:s");
       <form method="post" action="<?=\Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/saveAddMemberTrx") ?>">
         <div class="form-group f1">
           <label for="id_member">ID MEMBER</label>
-          <input type="text" class="form-control" id="id_member" name="id_member">
+          <select class="form-select" name="id_member">
+            <option value="none" selected>NONE</option>
+            <?php 
+            	foreach($data as $mem){
+               ?>
+            <option value="<?php echo $mem->id_member ?>"><?php echo $mem->name ?></option>
+            <?php } ?>
+          </select>
         </div>
         <div class="form-group f1">
-        <label for="id_subscription">ID SUBSCRIPTION</label>
-          <input type="text" class="form-control" id="id_subscription" name="id_subscription">
+          <label for="id_subscription">ID SUBSCRIPTION</label>
+          <select class="form-select" name="id_subscription">
+            <option value="none" selected>NONE</option>
+            <?php 
+            	foreach($Subs as $s){
+               ?>
+            <option value="<?php echo $s->id_subscription ?>"><?php echo $s->title ?></option>
+            <?php } ?>
+          </select>
         </div>
         <div class="form-group f1">
         <label for="date_trx">DATE TRX</label>
@@ -22,10 +36,10 @@ $arrivalString = $arrival->format("Y-m-d H:i:s");
         </div>
         <div class="form-group f1">
         <label for="active_at">ACTIVE AT</label>
-          <input type="text" class="form-control" id="active_at" name="active_at
+          <input type="text" class="form-control" id="active_at" name="active_at">
         <div class="form-group f1">
         <label for="expire_at">EXPIRE AT</label>
-          <input type="text" class="form-control" id="expire_at" name="expire_at
+          <input type="text" class="form-control" id="expire_at" name="expire_at">
         <div class="form-group f1">
           <label for="status">STATUS</label>
           <select class="form-select" name="status">

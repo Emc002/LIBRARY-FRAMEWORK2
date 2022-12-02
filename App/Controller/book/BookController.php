@@ -15,16 +15,17 @@ class BookController
   }
   public function book(){
     $tampilDataBook = self::$model->book();
-    View::renderBook('Book', $tampilDataBook);
+    View::render('book/Book', $tampilDataBook);
   }
 
   public function viewOneBook($id_book){
     $OneBook = self::$model->findBook($id_book);
-    View::renderOneBookDisplay('editBook', $OneBook);
+    
+    View::render('book/editBook', $OneBook);
   }
 
   public function addBookDisplay(){
-    View::renderAddBookDisplay('addBook');
+    View::render('book/addBook');
   }
 
 

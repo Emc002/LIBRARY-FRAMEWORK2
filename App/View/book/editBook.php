@@ -6,7 +6,7 @@ $arrival = new DateTime();
 $arrivalString = $arrival->format("Y-m-d H:i:s");
 ?>
    <div class="">
-      <form method="post" action="<?=\Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/updateLibrarian/$data->id_book")?>">
+      <form method="post" action="<?=\Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/updateBook/$data->id_book")?>">
       <div class="form-group f1">
           <label for="nama_laptop">ISBN</label>
           <input type="text" class="form-control" value="<?= $data->isbn ?>" id="isbn" name="isbn">
@@ -39,7 +39,7 @@ $arrivalString = $arrival->format("Y-m-d H:i:s");
        
         <div class="form-group f1">
 
-          <a href="<?= \Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/librarian") ?>" class="btn btn-warning">Back</a>
+          <a href="<?= \Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/book") ?>" class="btn btn-warning">Back</a>
           <input type="submit" class="btn btn-primary" value="submit">
         </div>
       </form>

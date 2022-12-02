@@ -63,7 +63,7 @@
 							<?php echo $td->updated_at?>
 						</td>
 						<td>
-						<a href="<?= \Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/viewOnebookX/$td->id_book")?>" type="button" class="btn btn-warning">Edit user</a>
+						<a href="<?= \Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/viewOneBook/$td->id_book")?>" type="button" class="btn btn-warning">Edit user</a>
 						<a href="<?= \Staditek\App\Core\Router::url("GITHUB/LIBRARY-FRAMEWORK2/Public/deleteBook/$td->id_book ")?>" type="button" class="btn btn-danger">Delete User</a>
 						</td>
 					</tr>
